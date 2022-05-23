@@ -1,2 +1,2 @@
 #!/bin/bash
-chown vicent 777 staff
+chown vincent:staff
