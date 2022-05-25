@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c 1 | echo "ELIZABETH"
+cut -c 1 | echo "ELIZABETH" \n "FOREVERINYOUREYES"
