@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #Task 9
-file test ='school'
 if [ -e "school" ]
         then 
                 echo "school file exists"
