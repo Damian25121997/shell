@@ -7,10 +7,12 @@ if [ -e $FILE ]
         if [ -s $FILE ]     
 		then
 			echo "school file is empty"
+		elif 
+			echo "school is a regular file"
 		else
 			echo "school file is not empty"
 	fi                
 
 	else
-                echo "school is a regular file"
+                echo "schoo file does not exist"
 fi
