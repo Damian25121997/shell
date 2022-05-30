@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
 x=1
-until [ $x -eq 10 ]
+until [ $x -eq 11 ]
 do 
 echo "Best School"
 x=$(( x + 1))
