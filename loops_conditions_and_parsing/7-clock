@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 #This script is displaying "Best School" 10 times
 h=0
-m=1
 while [ $h -lt 13 ]
 do 
 	echo "Hour: $h"
 	h=$(( h + 1 ))
+	m=1
         while [ $m -lt 60 ]
                 do 
 			echo $m
 			m=$(( m + 1 ))
                
 		done
-		
+		m=0		
 done        
