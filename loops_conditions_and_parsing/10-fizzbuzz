@@ -21,7 +21,7 @@ do
         else
                 echo "$x"
         fi
-        x=(($x+1))
+        x=($x+1)
 done
 ~
 ~
