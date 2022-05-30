@@ -5,12 +5,12 @@ m=1
 while [ $h -lt 13 ]
 do 
 	echo "hour: $h"
+	h=$(( h + 1 ))
         while [ $m -lt 60 ]
                 do 
 			echo $m
-			m=$((m + 1 ))
+			m=$(( m + 1 ))
                
 		done
-		h=$(( h + 1 ))
-		m=0
+		m=0	
 done        
