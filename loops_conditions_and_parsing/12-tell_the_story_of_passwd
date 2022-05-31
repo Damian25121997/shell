@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-#Task 12
-input="/etc/passwd"
-while IFS= read -r username password userid groupid comment homedir cmdshell
-do
-	echo "The user $username is part of the $groupid gang, lives in $homedir and rides $cmdshell. $userid's place is protected by the passcode $password, more info about the user here: $comment"
+# While with IFS read 
 
-done<"$input"
+while IFS=: read -r username password uid gid useridinfo homedir commandshell
+do
+  echo "The user $username is part of the $gid gang, lives in $homedir and rides $commandshell. $uid's place is protected by the passcode $password, more info about the user here: $useridinfo"
+done < /etc/passwd
