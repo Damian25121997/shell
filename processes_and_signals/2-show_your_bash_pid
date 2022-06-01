@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Task 2
+# shellcheck disable=SC2009
+pgrep -u
