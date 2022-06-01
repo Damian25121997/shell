@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Task 6
+x=$(pgrep 4-to_infinity_and_beyond)
+pkill "$x"
