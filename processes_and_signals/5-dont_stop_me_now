@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Task 5
-kill  $( pgrep -f "4-to_infinity_and_beyond")
-
+file=$(pgrep -f 4-to_infinity_and_beyond)
+kill "$file"
