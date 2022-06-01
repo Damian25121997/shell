@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Task 7
 while true
-trap 'echo "I am invincible!!!"' SIGTREM
+trap 'echo "I am invincible!!!"' 15	
 do
         echo "To infinity and beyond"
 	sleep 2
