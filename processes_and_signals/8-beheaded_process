@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Task 8
+file=$(pgrep -f 7-highlander)
+kill "$file"
