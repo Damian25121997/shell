@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 #Task 4
-for ((i=1;i++)); do echo "To infinity and beyound"; sleep2; done
+while true
+do
+	echo "To infinity and beyound"
+	sleep 2
+done
