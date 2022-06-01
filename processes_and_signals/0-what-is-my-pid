@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Task 0
+echo $$
