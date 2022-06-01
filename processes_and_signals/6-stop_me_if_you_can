@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Task 6
-pkill -15 -f "4-to_infinity_and_beyond"
+file=$(4-to_infinity_and_beyond)
+pkill -15 -f $file
