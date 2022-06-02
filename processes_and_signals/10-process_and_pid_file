@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Task 9
-echo "$$" > /var/run/myscript.pid
+echo $$ >> /var/run/myscript.pid
 
 trap "echo 'I heat the kill command'; rm -f /var/run/myscript.pid" 15
 
@@ -11,4 +11,5 @@ trap "rm -f /var/run/myscript.pid" 3
 while true 
 do
 	echo "To infinity and beyond"
+	sleep 2
 done
