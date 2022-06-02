@@ -8,7 +8,7 @@ trap "echo 'Y U no love me?!'" SIGINT
 trap "echo 'I hate the kill command'; rmfile" SIGTERM
 trap "echo 'I hate the kill command'; rmfile" SIGQUIT
 echo $$ >> /var/run/myscript.pid
-while (true)
+while true
 do
 	echo 'To infinity and beyond'
 	sleep 2
