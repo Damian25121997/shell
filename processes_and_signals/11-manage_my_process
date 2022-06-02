@@ -11,13 +11,13 @@ case "$1" in
 		echo "manage_my_process started";;
 	
 	stop)
-		pkill -f  "./manage_my_process" 
-			sudo rm "$file"
+		sudo pkill -f  "./manage_my_process" 
+			rm "$file"
 		echo "manage_my_process stopped";;
 	
 	restart)
-		sudo kill -15 "./manage_my_process" 
-			sudo rm "$file"
+		sudo pkill -f "./manage_my_process" 
+			rm "$file"
 		  ./manage_my_process &
                 echo "$!" > "$file"
 		echo "manage_my_process restarted";;
