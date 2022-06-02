@@ -4,7 +4,7 @@ echo $$ > /var/run/myscript.pid
 trap "echo 'Y U love me?!'" SIGINT
 trap "echo 'I heat the kill command'; rm -rf /var/run/myscript.pid; exit" SIGTERM
 trap "rm -rf /var/run/myscript.pid; exit" SIGQUIT
-while (true)
+while true
 do
 	echo "To infinity and beyond"
 	sleep 2
