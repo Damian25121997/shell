@@ -8,11 +8,11 @@ rmfile ()
 
 echo $$ >> /var/run/myscript.pid
 
-trap ' echo"I heat the kill command"; rmfile ' 15 
+trap ' echo "Y U no love me/!" ' 2
+
+trap ' echo "I heat the kill command"; rmfile ' 15 
 
 trap ' echo "I heat the kill command"; rmfile ' 3
-
-trap 'echo "Y U no love me" ' 2
 
 while true; 
 do
