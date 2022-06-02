@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Multiple traps
 
-trap "echo 'Y U no love me?!'" SIGINT
-trap "echo 'I hate the kill command'" SIGTERM
-trap "sudo rm /var/run/myscript.pid ; exit" SIGTERM
+trap "echo 'Y U no love me?!'" 2
+trap "echo 'I hate the kill command'" 15
+trap "sudo rm /var/run/myscript.pid ; exit" 3
 echo $$ > /var/run/myscript.pid
 while true
 do
