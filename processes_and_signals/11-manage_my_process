@@ -11,12 +11,12 @@ case "$1" in
 		echo "manage_my_process started";;
 	
 	stop)
-		sudo kill -15  "$(cat "$file")" 
+		sudo kill -15  "./manage_my_process" 
 			sudo rm "$file"
 		echo "manage_my_process stopped";;
 	
 	restart)
-		sudo kill -15 "$(cat "$file")" 
+		sudo kill -15 "./manage_my_process" 
 			sudo rm "$file"
 		  ./manage_my_process &
                 echo "$!" > "$file"
