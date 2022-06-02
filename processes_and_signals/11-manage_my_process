@@ -3,27 +3,23 @@
 
 file=/var/run/my_process.pid
 
-case "$1" in
-	
-	start)
-		./manage_my_process & 
-		echo "$!" > "$file"
-		echo "manage_my_process started";;
-	
-	stop)
-		sudo pkill -f  "./manage_my_process" 
-			rm "$file"
-		echo "manage_my_process stopped";;
-	
-	restart)
-		sudo pkill -f "./manage_my_process" 
-			rm "$file"
-		  ./manage_my_process &
-                echo "$!" > "$file"
-		echo "manage_my_process restarted";;
-	
-	*) 	
-		echo "Usage: manage_my_process {start|stop|restart}";;
+case "$1" in	
+start)
+./manage_my_process & 
+echo "$!" > "$file"
+echo "manage_my_process started" ;;	
+stop)
+sudo pkill -f  "./manage_my_process" 
+rm "$file"
+echo "manage_my_process stopped" ;;
+restart)
+sudo pkill -f "./manage_my_process" 
+rm "$file"
+./manage_my_process &
+echo "$!" > "$file"
+echo "manage_my_process restarted" ;;
+*)
+echo "Usage: manage_my_process {start|stop|restart}" ;;
 esac
 
 			
