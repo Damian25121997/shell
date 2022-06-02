@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Task 10
+
+file=/var/run/my_process.pid
+
+case $1 in
+	
+	start)
+		./manage_my_process & 
+		echo "$!" > "$file"
+		echo "manage_my_process started"
+	
+	stop)
+		./manage_my_process
+		sudo kill -15 $( cat "$file" ) &&
+			rm -r $file
+		echo "manage_my_process stopped"
+	
+	restart)
+		 ./manage_my_process
+		 sudo kill -15 $( cat "$file" ) &&
+			 rm -r $file |
+		  ./manage_my_process &
+                echo "$!" > "$file"
+		echo "manage_my_process restarted"
+	
+	*) 	
+		echo "Usege: manage_my_process {start|stop|restart}"
+esac
+
+			
