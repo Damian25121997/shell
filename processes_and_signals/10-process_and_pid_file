@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # Task 9
-echo $$ >> /var/run/myscript.pid
+echo $$ > /var/run/myscript.pid
 
-trap "echo 'I heat the kill command'; rm -f /var/run/myscript.pid" 15
+trap "
+echo 'I heat the kill command'; rm -rf /var/run/myscript.pid" 15
 
 trap "echo 'Y U no love me?!'" 2
 
-trap "rm -f /var/run/myscript.pid" 3
+trap "rm -rf /var/run/myscript.pid" 3
 
 while : 
 do
