@@ -11,7 +11,7 @@ case "$1" in
 		echo "manage_my_process started";;
 	
 	stop)
-		sudo kill -15  "./manage_my_process" 
+		pkill -f  "./manage_my_process" 
 			sudo rm "$file"
 		echo "manage_my_process stopped";;
 	
