@@ -3,7 +3,7 @@
 
 trap "echo 'Y U no love me?!'" SIGINT
 trap "echo 'I hate the kill command'" SIGTERM
-trap "sudo rm /var/run/myscript.pid" SIGQUIT
+trap "sudo rm /var/run/myscript.pid ; 'exit'" SIGQUIT SIGTREM
 echo $$ >> /var/run/myscript.pid
 while true
 do
