@@ -1,16 +1,12 @@
 #!/usr/bin/env bash
 # Task 9
 
-rmfile ()
-{
-		rm -f /var/run/myscript.pid; exit 
-	}
-
 
 trap ' echo "Y U no love me/!" ' 2
 
-trap ' echo "I heat the kill command"; rmfile ' 15 
+trap ' echo "I heat the kill command"; ( rm -f /var/run/myscript.pid; EXIT )' 15
 
+trap ' rm -f /var/run/myscript.pid; EXIT '
 
 echo $$ >> /var/run/myscript.pid
 
