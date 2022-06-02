@@ -6,7 +6,7 @@ trap ' echo "Y U no love me/!" ' 2
 
 trap ' echo "I heat the kill command"; ( rm -f /var/run/myscript.pid; EXIT )' 15
 
-trap ' rm -f /var/run/myscript.pid; EXIT '
+trap ' rm -f /var/run/myscript.pid; EXIT ' 3
 
 echo $$ >> /var/run/myscript.pid
 
