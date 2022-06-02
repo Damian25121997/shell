@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Write a message to file
 
-while :
+while true
 do
 
 	echo "I am alive!" >> /tmp/my_process
