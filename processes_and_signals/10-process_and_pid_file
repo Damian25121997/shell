@@ -6,7 +6,7 @@ while true
 
 trap "echo 'Y U no love me?!'" 2
 trap "echo 'I hate the kill command'" 15
-trap "sudo rm /var/run/myscript.pid ; exit" 3
+trap "sudo rm -r /var/run/myscript.pid ; exit" 3
 
 do
 	echo 'To infinity and beyond'
