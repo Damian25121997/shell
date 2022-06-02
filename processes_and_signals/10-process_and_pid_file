@@ -1,14 +1,11 @@
 #!/usr/bin/env bash
-# Multiple traps
+#
 file=/var/run/myscript.pid
 echo $$ >> $file
-while true
-
+trap 'echo I hate the kill command; sudo rm $file' 15
 trap 'echo Y U no love me?!' 2
-trap 'echo I hate the kill command' 15
-trap 'sudo rm -f $file ; exit' 3
-
-do
-	echo 'To infinity and beyond'
-	sleep 2
-done
+trap rm $file 3
+while ((1)); do
+	    echo "To infinity and beyond"
+	        sleep 2
+	done
