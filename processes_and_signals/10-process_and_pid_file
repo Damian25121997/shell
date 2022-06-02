@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 # Multiple traps
-rmfile()
-{
-	rm -f /van/run/myscript.pid
-}
+
 trap "echo 'Y U no love me?!'" SIGINT
-trap "echo 'I hate the kill command'; rmfile" SIGTERM
-trap "echo 'I hate the kill command'; rmfile" SIGQUIT
+trap "echo 'I hate the kill command'" SIGTERM
+trap "sudo rm /var/run/myscript.pid" SIGQUIT
 echo $$ >> /var/run/myscript.pid
 while true
 do
