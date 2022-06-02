@@ -2,7 +2,7 @@
 # Multiple traps
 rmfile()
 {
-	rm -f /van/run/myscript.pid; exit
+	rm -f /van/run/myscript.pid
 }
 trap "echo 'Y U no love me?!'" SIGINT
 trap "echo 'I hate the kill command'; rmfile" SIGTERM
