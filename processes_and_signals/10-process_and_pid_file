@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 # Task 9
-
-
-trap "echo 'Y U no love me?!'" SIGINT
+echo $$ > /var/run/myscript.pid
 
 trap "echo 'I heat the kill command'; rm -f /var/run/myscript.pid" SIGTERM
 
-trap "rm -f /var/run/myscript.pid" SIGQUIT
+trap "echo 'Y U no love me?!'" SIGINT
 
-echo $$ > /var/run/myscript.pid
+trap "rm -f /var/run/myscript.pid" SIGQUIT
 
 while true; 
 do
