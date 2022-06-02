@@ -23,7 +23,7 @@ case "$1" in
 		echo "manage_my_process restarted";;
 	
 	*) 	
-		echo "Usege: manage_my_process {start|stop|restart}";;
+		echo "Usage: manage_my_process {start|stop|restart}";;
 esac
 
 			
